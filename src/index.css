@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #080D18;
+    --bg-secondary: #0D1424;
+    --card-bg: #111A2C;
+    --border-color: #22304A;
+    --accent-primary: #5B8CFF;
+    --accent-secondary: #8B7CFF;
+    --color-success: #20C997;
+    --color-warning: #FFB020;
+    --color-danger: #FF5C6C;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #080D18;
+    color: #F1F5F9;
+    letter-spacing: -0.011em;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* SOC Enterprise Card & Surface Styles */
+.soc-card {
+  background-color: #111A2C;
+  border: 1px solid #22304A;
+  border-radius: 10px;
+  transition: border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.soc-card:hover {
+  border-color: #314366;
+}
+
+.soc-panel {
+  background-color: #0D1424;
+  border: 1px solid #1E2B42;
+  border-radius: 8px;
+}
+
+/* Compact dark SOC scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080D18;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22304A;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #354B72;
+}
+
+/* Subtle live telemetry pulse */
+@keyframes live-ping {
+  0% { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+
+.animate-live-ping {
+  animation: live-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Subtle node scan effect */
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}

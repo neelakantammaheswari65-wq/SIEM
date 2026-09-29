@@ -1,0 +1,7 @@
+{
+  "name": "SIEM Insider Threat Detection Platform",
+  "description": "Enterprise SIEM and SOC platform detecting insider threats via rule engine, user risk scoring, ML anomaly detection, and USB DLP policy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
